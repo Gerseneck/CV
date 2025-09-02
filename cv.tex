@@ -54,12 +54,12 @@
 \titlespacing{\section}{0pt}{10pt}{10pt}
 
 %for publications
-\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
+\usepackage[style=authoryear, sorting=ynt, maxbibnames=2]{biblatex}
 
 %Setup hyperref package, and colours for links
 \usepackage[unicode, draft=false]{hyperref}
-\definecolor{linkcolour}{rgb}{0,0.2,0.6}
-\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+\definecolor{linkcolour}{rgb}{0, 0.2, 0.6}
+\hypersetup{colorlinks, breaklinks, urlcolor=linkcolour, linkcolor=linkcolour}
 \addbibresource{citations.bib}
 \setlength\bibitemsep{1em}
 
@@ -74,7 +74,7 @@
 \newenvironment{jobshort}[2]
     {
     \begin{tabularx}{\linewidth}{@{}l X r@{}}
-    \textbf{#1} & \hfill &  #2 \\[3.75pt]
+    \textbf{#1} & \hfill & #2 \\[3.75pt]
     \end{tabularx}
     }
     {
@@ -83,10 +83,10 @@
 \newenvironment{joblong}[2]
     {
     \begin{tabularx}{\linewidth}{@{}l X r@{}}
-    \textbf{#1} & \hfill &  #2 \\[3.75pt]
+    \textbf{#1} & \hfill & #2 \\[3.75pt]
     \end{tabularx}
     \begin{minipage}[t]{\linewidth}
-    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt,label=--]
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt, label=--]
     }
     {
     \end{itemize}
@@ -171,6 +171,14 @@
     Programming & Python, Java, Ruby (on Rails), HTML \\
     Systems & Experienced with Linux and Unix-like environments/tools \\
 \end{tabularx}
+
+\section{Hobbies}
+\begin{itemize}
+    \item Reading
+    \item Pondering Philosophical Questions/Personal Values
+    \item Playing Badminton
+    \item Solving Puzzles
+\end{itemize}
 
 \vfill
 \center{\footnotesize Last updated: \today}
