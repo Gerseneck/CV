@@ -71,27 +71,22 @@
 
 
 % job listing environments
-\newenvironment{jobshort}[2]
-    {
-    \begin{tabularx}{\linewidth}{@{}l X r@{}}
-    \textbf{#1} & \hfill & #2 \\[3.75pt]
-    \end{tabularx}
-    }
-    {
-    }
+\newenvironment{jobshort}[2]{%
+    \begin{tabularx}{\linewidth}{@{}l X r@{}}%
+        \textbf{#1} & \hfill & #2 \\[3.75pt]%
+    \end{tabularx}%
+}{}
 
-\newenvironment{joblong}[2]
-    {
-    \begin{tabularx}{\linewidth}{@{}l X r@{}}
-    \textbf{#1} & \hfill & #2 \\[3.75pt]
-    \end{tabularx}
-    \begin{minipage}[t]{\linewidth}
-    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt, label=--]
-    }
-    {
-    \end{itemize}
-    \end{minipage}    
-    }
+\newenvironment{joblong}[2]{%
+    \begin{tabularx}{\linewidth}{@{}l X r@{}}%
+        \textbf{#1} & \hfill & #2 \\[3.75pt]%
+    \end{tabularx}%
+    \begin{minipage}[t]{\linewidth}%
+        \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt, label=--]%
+}{%
+        \end{itemize}%
+    \end{minipage}%
+}
 
 
 
@@ -106,12 +101,6 @@
 %----------------------------------------------------------------------------------------
 %	TITLE
 %----------------------------------------------------------------------------------------
-
-% \begin{tabularx}{\linewidth}{ @{}X X@{} }
-% \huge{Your Name}\vspace{2pt} & \hfill \emoji{incoming-envelope} email@email.com \\
-% \raisebox{-0.05\height}\faGithub\ username \ | \
-% \raisebox{-0.00\height}\faLinkedin\ username \ | \ \raisebox{-0.05\height}\faGlobe \ mysite.com  & \hfill \emoji{calling} number
-% \end{tabularx}
 
 \begin{tabularx}{\linewidth}{@{} C @{}}
 \Huge{Geeson Wan} \\[7.5pt]
@@ -150,6 +139,10 @@ Undergraduate Engineering student at Purdue University with a strong background 
 
 \section{Other Experiences/Achievements}
 
+\begin{jobshort}{Purdue Alpha Lambda Delta Phi Eta Honors Society}{March 2026 - Present}
+    \vspace{-1em}
+\end{jobshort}
+
 \begin{jobshort}{National Honors Society Tutor}{August 2024 - May 2025}
     \begin{itemize}
         \item Tutored Honors Chemistry
@@ -181,6 +174,12 @@ Undergraduate Engineering student at Purdue University with a strong background 
     \multicolumn{2}{@{}X@{}}{Extensively used Ruby on Rails framework with stimulus JavaScript framework to connect backend and front end} \\
     \multicolumn{2}{@{}X@{}}{Developed and improved many aspects of the user interface, including scaling for mobile devices} \\
     \multicolumn{2}{@{}X@{}}{Developed the calendar and many event related subsystems} \\
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+    \textbf{Translator For Open Source Projects} & \hfill \href{https://hosted.weblate.org/user/Gerseneck/}{https://hosted.weblate.org/user/Gerseneck/} \\[3.75pt]
+    \multicolumn{2}{@{}X@{}}{Provided and verified translations for Simplified Chinese for System76 COSMIC\texttrademark{} DE} \\
+    \multicolumn{2}{@{}X@{}}{Provided translations for Apps like Fotema, Tempest, Gaphor, etc.} \\
 \end{tabularx}
 
 \begin{tabularx}{\linewidth}{ @{}l r@{} }
