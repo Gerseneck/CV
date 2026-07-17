@@ -20,54 +20,54 @@
 %	PACKAGES
 %----------------------------------------------------------------------------------------
 \usepackage{url}
-\usepackage{parskip} 	
+\usepackage{parskip}
 
-%other packages for formatting
+% other packages for formatting
 \RequirePackage{color}
 \RequirePackage{graphicx}
 \usepackage[usenames,dvipsnames]{xcolor}
 \usepackage[scale=0.9]{geometry}
 
-%tabularx environment
+% tabularx environment
 \usepackage{tabularx}
 
-%for lists within experience section
+% for lists within experience section
 \usepackage{enumitem}
 
 % centered version of 'X' col. type
 \newcolumntype{C}{>{\centering\arraybackslash}X} 
 
-%to prevent spillover of tabular into next pages
+% to prevent spillover of tabular into next pages
 \usepackage{supertabular}
 \usepackage{tabularx}
 \newlength{\fullcollw}
 \setlength{\fullcollw}{0.47\textwidth}
 
-%custom \section
-\usepackage{titlesec}				
+% custom \section
+\usepackage{titlesec}
 \usepackage{multicol}
 \usepackage{multirow}
 
-%CV Sections inspired by: 
-%http://stefano.italians.nl/archives/26
+% CV Sections inspired by: 
+% http://stefano.italians.nl/archives/26
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
 \titlespacing{\section}{0pt}{10pt}{10pt}
 
-%for publications
+% for publications
 \usepackage[style=authoryear, sorting=ynt, maxbibnames=2]{biblatex}
 
-%Setup hyperref package, and colours for links
+% Setup hyperref package, and colours for links
 \usepackage[unicode, draft=false]{hyperref}
 \definecolor{linkcolour}{rgb}{0, 0.2, 0.6}
 \hypersetup{colorlinks, breaklinks, urlcolor=linkcolour, linkcolor=linkcolour}
 \addbibresource{citations.bib}
 \setlength\bibitemsep{1em}
 
-%for social icons
+% for social icons
 \usepackage{fontawesome5}
 
-%debug page outer frames
-%\usepackage{showframe}
+% debug page outer frames
+% \usepackage{showframe}
 
 
 % job listing environments
@@ -112,11 +112,11 @@
 \end{tabularx}
 
 \section{Summary}
-Computer Engineering student at Purdue University with experience in systems programming, web development, and open-source software. Interested in embedded systems, semiconductors, and developer tooling.
+Computer Engineering student at Purdue University with experience in systems programming, embedded development, and open-source software. Passionate about embedded systems, computer architecture, and developer tooling.
 
 \section{Education}
 
-\begin{tabularx}{\linewidth}{@{}l X@{}}	
+\begin{tabularx}{\linewidth}{@{}l X@{}}
     2025 - present & Undergraduate Computer Engineering at \textbf{Purdue University} \\
     2021 - 2025 & West Lafayette Junior/Senior High School (Academic Honors Diploma) \\
 \end{tabularx}
@@ -124,18 +124,19 @@ Computer Engineering student at Purdue University with experience in systems pro
 \section{Skills}
 
 \begin{tabularx}{\linewidth}{@{}l X@{}}
-    \textbf{Programming Languages} & Python, Java, C, Ruby, Lua, HTML/CSS, JavaScript, \& \LaTeX \\
+    \textbf{Programming Languages} & Python, Java, C, C++, Ruby, Lua, HTML/CSS, JavaScript, \& \LaTeX \\
+    \textbf{Embedded} & Arduino IDE, breadboarding, basic electronics, microcontrollers \\
     \textbf{Frameworks} & Ruby on Rails, StimulusJS \\
     \textbf{Tools/System} & Git, Vim, Bash, \& Linux \\
-    \textbf{Languages Spoken} &  English (Native), Mandarin Chinese (Native) \\
+    \textbf{Languages Spoken} & English (Native), Mandarin Chinese (Native) \\
 \end{tabularx}
 
 \section{Professional Experience}
 
 \begin{jobshort}{Internship at Sledgehammer Infosystems}{June 2023 - August 2023}
     \begin{itemize}
-        \item Contributed to Ruby on Rails web application development using MVC architecture
-        \item Collaborated in open-source development workflows using Git and issue tracking
+        \item Developed features for a Ruby on Rails web application using MVC architecture.
+        \item Developed new features and bug fixes using Git-based collaborative development workflows.
         \item Researched and integrated unfamiliar tools and libraries through technical documentation
     \end{itemize}
 \end{jobshort}
@@ -150,18 +151,19 @@ Computer Engineering student at Purdue University with experience in systems pro
     \end{itemize}
 \end{jobshort}
 
-\begin{jobshort}{Gatherpack \( \vert \) Ruby on Rails}{\href{https://gatherpack.com}{https://gatherpack.com}}
+\begin{jobshort}{Gatherpack \( \vert \) Ruby on Rails, StimulusJS, PostgreSQL}{\href{https://gatherpack.com}{https://gatherpack.com}}
     \begin{itemize}
         \item Developer of a full-stack event management platform using Ruby on Rails and StimulusJS
         \item Designed event scheduling subsystem supporting recurring events and calendar synchronization
         \item Designed responsive UI components optimized for mobile devices
+        \item Currently used by multiple FIRST Robotics Teams as their core event management infrastructure
     \end{itemize}
 \end{jobshort}
 
 \begin{jobshort}{GreatStudier \( \vert \) Python}{\href{https://github.com/greatericontop/GreatStudier}{https://github.com/greatericontop/GreatStudier}}
     \begin{itemize}
         \item Developed an open source flashcard study command line application with a peer
-        \item Maintained and developed functionality for web scraping the contents for a study sets from Quizlet
+        \item Designed and developed functionality for web scraping the contents for a study sets from Quizlet
         \item Wrote documentation and instructions regarding the usage and installation of the application
     \end{itemize}
 \end{jobshort}
@@ -187,9 +189,11 @@ Computer Engineering student at Purdue University with experience in systems pro
 
 \begin{jobshort}{FIRST Robotics Team 461}{August 2024 - May 2025}
     \begin{itemize}
-        \item Created/Maintained the new team website (\href{https://github.com/frc461/website-2024}{https://github.com/frc461/website-2024})
+        \item Created/Built the new team website (\href{https://github.com/frc461/website-2024}{https://github.com/frc461/website-2024})
         \item Collaborated with team leadership to design a new scouting and match-analysis system
         \item Maintained technical infrastructure and organized development resources for team operations
+        \item Experimented with a new Oculus based vision and location tracking system using OrangePI
+        \item Developed multiple software and hardware subsystems, integrating embedded hardware with software components.
     \end{itemize}
 \end{jobshort}
 
