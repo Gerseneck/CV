@@ -79,13 +79,13 @@
 
 \newenvironment{joblong}[2]{%
     \begin{tabularx}{\linewidth}{@{}l X r@{}}%
-        \textbf{#1} & \hfill & #2 \\[3.75pt]%
-    \end{tabularx}%
-    \begin{minipage}[t]{\linewidth}%
-        \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt, label=--]%
+        \textbf{#1} & \hfill & #2 \\[3.75pt]
+    \end{tabularx}
+    \begin{minipage}[t]{\linewidth}
+        \begin{itemize}[nosep]
 }{%
-        \end{itemize}%
-    \end{minipage}%
+        \end{itemize}
+    \end{minipage}
 }
 
 
@@ -97,6 +97,7 @@
 
 % non-numbered pages
 \pagestyle{empty} 
+\setlist{nolistsep}
 
 %----------------------------------------------------------------------------------------
 %	TITLE
@@ -178,7 +179,7 @@ Computer Engineering student at Purdue University with experience in programming
 
 \begin{jobshort}{Translator For Open Source Projects}{\href{https://hosted.weblate.org/user/Gerseneck/}{https://hosted.weblate.org/user/Gerseneck/}}
     \begin{itemize}
-        \item Contributed Simplified Chinese translations for System76 COSMIC DE, Flathub, Ubuntu, Fotema, Gaphor, and other projects
+        \item Contributed Simplified Chinese and Traditional Chinese translations for System76 COSMIC DE, Flathub, Ubuntu, Fotema, Gaphor, and other projects
         \item Coordinated translation updates and managed localization feedback for open-source contributors
     \end{itemize} 
 \end{jobshort}
@@ -189,9 +190,11 @@ Computer Engineering student at Purdue University with experience in programming
     \vspace{-1em}
 \end{jobshort}
 
-\begin{jobshort}{National Honors Society Tutor}{August 2024 - May 2025}
+\begin{jobshort}{National Honors Society \( \vert \) Tutor}{August 2024 - May 2025}
     \begin{itemize}
-        \item Tutored Honors Chemistry
+        \item A prestigious U.S. high school organization recognizing students for excellence in
+scholarship, leadership, Service, and character.
+        \item Tutored Honors Chemistry for underclassmen
     \end{itemize}
 \end{jobshort}
 
