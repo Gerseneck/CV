@@ -22,36 +22,27 @@
 \usepackage{url}
 \usepackage{parskip}
 
-% other packages for formatting
 \RequirePackage{color}
 \RequirePackage{graphicx}
 \usepackage[dvipsnames]{xcolor}
-\usepackage[scale = 0.9]{geometry}
+\usepackage[scale=0.9]{geometry}
 
-% tabularx environment
 \usepackage{tabularx}
-
-% for lists within experience section
 \usepackage{enumitem}
-
-% centered version of 'X' col. type
 \newcolumntype{C}{>{\centering\arraybackslash}X} 
-
-% to prevent spillover of tabular into next pages
 \usepackage{supertabular}
 \usepackage{tabularx}
 \newlength{\fullcollw}
 \setlength{\fullcollw}{0.47\textwidth}
 
-% custom \section
 \usepackage{titlesec}
 \usepackage{multicol}
 \usepackage{multirow}
 
 % CV Sections inspired by: 
 % http://stefano.italians.nl/archives/26
-\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{10pt}{10pt}
+\titleformat{\section}{\large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{10pt}{5pt}
 
 % for publications
 \usepackage[style=authoryear, sorting=ynt, maxbibnames=2]{biblatex}
@@ -63,45 +54,31 @@
 \addbibresource{citations.bib}
 \setlength\bibitemsep{1em}
 
-% for social icons
 \usepackage{fontawesome5}
 
 % debug page outer frames
 % \usepackage{showframe}
 
-
 % job listing environments
-\newenvironment{jobshort}[2]{%
+\newenvironment{job}[2]{%
     \begin{tabularx}{\linewidth}{@{}l X r@{}}%
-        \textbf{#1} & \hfill & #2 \\[3.75pt]%
+        \textbf{#1} & \hfill & #2 \\%
     \end{tabularx}%
 }{}
 
-\newenvironment{joblong}[2]{%
+\newcommand{\jobdescription}[2]{%
     \begin{tabularx}{\linewidth}{@{}l X r@{}}%
-        \textbf{#1} & \hfill & #2 \\[3.75pt]
-    \end{tabularx}
-    \begin{minipage}[t]{\linewidth}
-        \begin{itemize}[nosep]
-}{%
-        \end{itemize}
-    \end{minipage}
+        \footnotesize{\textit{#1}} &%
+        \hfill &%
+        \ifstrempty{#2}{}{\footnotesize{\textit{#2}}} \\%
+    \end{tabularx}%
 }
 
-
-
-%----------------------------------------------------------------------------------------
-%	BEGIN DOCUMENT
-%----------------------------------------------------------------------------------------
 \begin{document}
 
 % non-numbered pages
 \pagestyle{empty} 
 \setlist{nolistsep}
-
-%----------------------------------------------------------------------------------------
-%	TITLE
-%----------------------------------------------------------------------------------------
 
 \begin{tabularx}{\linewidth}{@{} C @{}}
     \Huge{Geeson Wan} \\[7.5pt]
@@ -112,15 +89,15 @@
     \href{tel:7654094313}{\raisebox{-0.05\height}\faMobile \ +1 765-409-4313} \\
 \end{tabularx}
 
-\section{Summary}
-Computer Engineering student at Purdue University with experience in programming, embedded development, and open-source software. Passionate about embedded systems, microelectronics, and semiconductors.
-
 \section{Education}
 
-\begin{tabularx}{\linewidth}{@{}l X@{}}
-    2025 - 2029 (\textit{exp.}) & Undergraduate Computer Engineering at \textbf{Purdue University} - \textit{West Lafayette, IN} \\
-    2021 - 2025 & West Lafayette Junior/Senior High School (Academic Honors Diploma) \\
-\end{tabularx}
+\begin{job}{Purdue University}{exp. May 2029}
+    \jobdescription{B.S. Computer Engineering}{West Lafayette, IN}
+    \begin{itemize}
+        \item \textbf{Relevant Coursework:} Electrical Engineering Fundamentals (ECE20001), Advanced C Programming (ECE26400), Electric \& Magnetic Interactions (PHYS27200), Discrete Math (ECE20869)
+        \item \textbf{Extracurricular Activities:} IEEE Computer Society (Event Coordinator), Purdue Badminton Club
+    \end{itemize}
+\end{job}
 
 \section{Skills}
 
@@ -132,99 +109,45 @@ Computer Engineering student at Purdue University with experience in programming
     \textbf{Languages Spoken} & English (Native), Mandarin Chinese (Native) \\
 \end{tabularx}
 
-\section{Professional Experience}
-
-\begin{jobshort}{Purdue Physics 272 E\&M Undergraduate Teaching Assistant}{August 2026 - Present}
-\end{jobshort}
-
-\begin{jobshort}{Internship at Sledgehammer Infosystems}{June 2023 - August 2023}
-    \begin{itemize}
-        \item Developed features for a Ruby on Rails web application using MVC architecture.
-        \item Developed new features and bug fixes using Git-based collaborative development workflows.
-        \item Researched and integrated unfamiliar tools and libraries through technical documentation
-    \end{itemize}
-\end{jobshort}
-
 \section{Projects}
 
-\begin{jobshort}{Tempo Clock \( \vert \) Arduino, Embedded}{\href{https://github.com/Gerseneck/tempo-clock}{https://github.com/Gerseneck/tempo-clock}}
+\begin{job}{Tempo Clock \( \vert \) Arduino, Embedded}{\href{https://github.com/Gerseneck/tempo-clock}{https://github.com/Gerseneck/tempo-clock}}
     \begin{itemize}
         \item Designed and implemented an embedded chess clock with configurable time controls, non-blocking firmware, and a menu-driven LCD interface.
         \item Developed a modular firmware architecture using state machines for timing, input handling, display updates, advanced logging, and persistent settings.
         \item Implemented EEPROM-based storage for user preferences and game statistics, along with software debouncing and audio alerts.
     \end{itemize}
-\end{jobshort}
+\end{job}
 
-\begin{jobshort}{Game Boy Emulator \( \vert \) C}{\href{https://github.com/IEEE-C-Society-25-26/Game-Boy-Project}{https://github.com/IEEE-C-Society-25-26/Game-Boy-Project}}
+\begin{job}{Game Boy Emulator \( \vert \) C}{\href{https://github.com/IEEE-C-Society-25-26/Game-Boy-Project}{https://github.com/IEEE-C-Society-25-26/Game-Boy-Project}}
     \begin{itemize}
         \item Implemented CPU instruction decoding and register emulation in C
         \item Refactored emulator subsystem interfaces to improve modularity and debugging
         \item Authored architecture and debugging documentation for emulator components
     \end{itemize}
-\end{jobshort}
+\end{job}
 
-\begin{jobshort}{GatherPack \( \vert \) Ruby on Rails, StimulusJS, PostgreSQL}{\href{https://gatherpack.com}{https://gatherpack.com}}
+\begin{job}{GatherPack \( \vert \) Ruby on Rails, StimulusJS, PostgreSQL}{\href{https://gatherpack.com}{https://gatherpack.com}}
     \begin{itemize}
         \item Developer of a full-stack event management platform using Ruby on Rails and StimulusJS
         \item Designed event scheduling subsystem supporting large events and calendar synchronization
         \item Designed responsive UI components optimized for mobile devices
         \item Currently used by multiple FIRST Robotics Teams as their core event management infrastructure
     \end{itemize}
-\end{jobshort}
+\end{job}
 
-\begin{jobshort}{GreatStudier \( \vert \) Python}{\href{https://github.com/greatericontop/GreatStudier}{https://github.com/greatericontop/GreatStudier}}
-    \begin{itemize}
-        \item Developed an open source flashcard study command line application with a peer
-        \item Designed and developed functionality for web scraping the contents for a study sets from Quizlet
-        \item Wrote documentation and instructions regarding the usage and installation of the application
-    \end{itemize}
-\end{jobshort}
+\section{Professional Experience}
 
-\begin{jobshort}{Translator For Open Source Projects}{\href{https://hosted.weblate.org/user/Gerseneck/}{https://hosted.weblate.org/user/Gerseneck/}}
-    \begin{itemize}
-        \item Contributed Simplified Chinese and Traditional Chinese translations for System76 COSMIC DE, Flathub, Ubuntu, Fotema, Gaphor, and other projects
-        \item Coordinated translation updates and managed localization feedback for open-source contributors
-    \end{itemize} 
-\end{jobshort}
+\begin{job}{Purdue Undergraduate Teaching Assistant}{August 2026 - Present}
+    \vspace{-0.5em}
+    \jobdescription{Physics 27200 Electric \& Magnetic Interactions}{West Lafayette, IN}
+\end{job}
 
 \section{Other Experiences/Achievements}
 
-\begin{jobshort}{Purdue Alpha Lambda Delta Phi Eta Honors Society}{March 2026 - Present}
+\begin{job}{Purdue Alpha Lambda Delta Phi Eta Honors Society}{March 2026 - Present}
     \vspace{-1em}
-\end{jobshort}
-
-\begin{jobshort}{National Honors Society \( \vert \) Tutor}{August 2024 - May 2025}
-    \begin{itemize}
-        \item A prestigious U.S. high school organization recognizing students for excellence in
-scholarship, leadership, Service, and character.
-        \item Tutored Honors Chemistry for underclassmen
-    \end{itemize}
-\end{jobshort}
-
-\begin{jobshort}{FIRST Robotics Team 461}{August 2024 - May 2025}
-    \begin{itemize}
-        \item Created the new team website (\href{https://github.com/frc461/website-2024}{https://github.com/frc461/website-2024})
-        \item Collaborated with team leadership to design a new scouting and match-analysis system
-        \item Maintained technical infrastructure and organized development resources for team operations
-        \item Experimented with a new Oculus based vision and location tracking system using OrangePI
-        \item Developed multiple software and hardware subsystems, integrating embedded hardware with software components.
-    \end{itemize}
-\end{jobshort}
-
-\begin{jobshort}{West Lafayette Hack Club}{August 2023 - May 2025}
-    \begin{itemize}
-        \item Executive Officer
-        \item Planned and led weekly meetings for 20+ club members
-        \item Taught CS workshops at multiple Hackathons that influenced over 100+ middle school and high school students
-        \item Developed and maintained the team website using modern web technologies, improving communication and resource accessibility (\href{https://wl.hackclub.com/}{https://wl.hackclub.com})
-    \end{itemize}
-\end{jobshort}
-
-\begin{jobshort}{Volunteering with Boys Organization for Student Services}{August 2021 - May 2024}
-    \begin{itemize}
-        \item Volunteered for several Food Finders, Toy Drives, and Concession Stands
-    \end{itemize}
-\end{jobshort}
+\end{job}
 
 % \vfill
 % \center{\footnotesize Last updated: \today}
