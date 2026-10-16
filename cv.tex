@@ -1,4 +1,4 @@
-\documentclass[letter, 11pt]{article}
+\documentclass[letter, 10.5pt]{article}
 
 %----------------------------------------------------------------------------------------
 %	FONT
@@ -25,7 +25,7 @@
 \RequirePackage{color}
 \RequirePackage{graphicx}
 \usepackage[dvipsnames]{xcolor}
-\usepackage[scale=0.9]{geometry}
+\usepackage[hscale=0.9, vscale=0.95, vcentering]{geometry}
 
 \usepackage{tabularx}
 \usepackage{enumitem}
@@ -81,7 +81,8 @@
 \setlist{nolistsep}
 
 \begin{tabularx}{\linewidth}{@{} C @{}}
-    \Huge{Geeson Wan} \\[7.5pt]
+    \Huge{Geeson Wan} \\
+    U.S. Citizen \hfill \\[5.5pt]
     \href{https://github.com/Gerseneck}{\raisebox{-0.05\height}\faGithub\ Gerseneck} \ $|$ \ 
     \href{https://linkedin.com/in/geeson-wan}{\raisebox{-0.05\height}\faLinkedin\ geeson-wan} \ $|$ \ 
     \href{https://gerseneck.github.io}{\raisebox{-0.05\height}\faGlobe \ gerseneck.github.io} \ $|$ \ 
@@ -92,10 +93,12 @@
 \section{Education}
 
 \begin{job}{Purdue University}{exp. May 2029}
+    \vspace{-0.5em}
     \jobdescription{B.S. Computer Engineering}{West Lafayette, IN}
     \begin{itemize}
         \item \textbf{Relevant Coursework:} Electrical Engineering Fundamentals (ECE20001), Advanced C Programming (ECE\-26400), Electric \& Magnetic Interactions (PHYS27200), Discrete Math (ECE20869)
         \item \textbf{Extracurricular Activities:} IEEE Computer Society (Event Coordinator), Purdue Badminton Club
+        \item \textbf{GPA:} 3.96
     \end{itemize}
 \end{job}
 
@@ -103,7 +106,7 @@
 
 \begin{tabularx}{\linewidth}{@{}l X@{}}
     \textbf{Programming Languages} & Python, Java, C, C++, Ruby, Lua, HTML/CSS, JavaScript, \& \LaTeX \\
-    \textbf{Embedded} & Arduino IDE, bread-boarding, basic electronics, microcontrollers \\
+    \textbf{Hardware} & Arduino IDE, Bread-boarding, Digital Multimeter, Oscilloscope, Benchtop Power Supplies \& Waveform Generator, Microcontrollers \\
     \textbf{Frameworks} & Ruby on Rails, StimulusJS \\
     \textbf{Tools/System} & Git, Vim, Bash, \& Linux \\
     \textbf{Languages Spoken} & English (Native), Mandarin Chinese (Native) \\
@@ -112,6 +115,8 @@
 \section{Projects}
 
 \begin{job}{Tempo Clock \( \vert \) Arduino, Embedded}{\href{https://github.com/Gerseneck/tempo-clock}{https://github.com/Gerseneck/tempo-clock}}
+    \vspace{-0.5em}
+    \jobdescription{Personal Project}{June 2026 - August 2026}
     \begin{itemize}
         \item Designed and implemented an embedded chess clock with configurable time controls, non-blocking firmware, and a menu-driven LCD interface
         \item Developed a modular firmware architecture using state machines for timing, input handling, display updates, advanced logging, and persistent settings
@@ -119,7 +124,9 @@
     \end{itemize}
 \end{job}
 
-\begin{job}{Game Boy Emulator \( \vert \) C}{\href{https://github.com/IEEE-C-Society/Game-Boy-Project}{https://github.com/IEEE-C-Society/Game-Boy-Project}}
+\begin{job}{Game Boy Emulator \( \vert \) C}{Purdue IEEE Computer Society}
+    \vspace{-0.5em}
+    \jobdescription{}{January 2026 - Present}
     \begin{itemize}
         \item Implemented CPU instruction decoding and register emulation in C
         \item Refactored emulator subsystem interfaces to improve modularity and debugging
@@ -128,6 +135,8 @@
 \end{job}
 
 \begin{job}{GatherPack \( \vert \) Ruby on Rails, StimulusJS, PostgreSQL}{\href{https://gatherpack.com}{https://gatherpack.com}}
+    \vspace{-0.5em}
+    \jobdescription{}{May 2024 - Present}
     \begin{itemize}
         \item Developer of a full-stack event management platform using Ruby on Rails and StimulusJS
         \item Designed event scheduling subsystem supporting large events and calendar synchronization
@@ -141,13 +150,16 @@
 \begin{job}{Purdue Undergraduate Teaching Assistant}{August 2026 - Present}
     \vspace{-0.5em}
     \jobdescription{Physics 27200 Electric \& Magnetic Interactions}{West Lafayette, IN}
+    \begin{itemize}
+        \item Assisted with weekly class sessions by providing help with review materials and help on difficult concepts
+        \item Provided assistance by keeping students focused and engaged with key concepts relevant to weekly lectures
+        \item Mentored and engaged with over 110 students across 3 sections per week throughout the fall semester
+    \end{itemize}
 \end{job}
-
-\vspace{-1em}
 
 \begin{job}{Internship at Sledgehammer Infosystems}{June 2023 - August 2023}
     \vspace{-0.5em}
-    \jobdescription{}{West Lafayette, IN}
+    \jobdescription{Full Stack Web Development}{West Lafayette, IN}
     \begin{itemize}
         \item Developed features for a Ruby on Rails web application using MVC architecture
         \item Developed new features and bug fixes using Git-based collaborative development workflows
